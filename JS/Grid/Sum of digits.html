@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        Enter any Number: <input type="number" id="a" ></br></br>
+        Sum of digits:<input type="number" id="result" ></br>
+        <input type="submit" onclick="sum()">
+       <script>
+        
+            function sum()
+            {
+               var a= Number(document.getElementById("a").value);
+                var temp,sum=0;
+                temp=a;
+                while(temp!=0){
+                    var c=temp%10
+                    if(c%2==0){
+                        sum=sum+c
+                    }
+                    temp=parseInt(temp/10);
+                }
+                    
+                var result = document.getElementById("result");
+                result.value = sum;
+               }
+            //    else 
+            //    {
+            //        document.write("Only Even Numbers are Valid!!!")
+               
+            //    }
+       </script>
+    </body>
+</html>
