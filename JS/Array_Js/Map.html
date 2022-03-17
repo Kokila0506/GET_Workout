@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script>
+        
+        let list = [
+            {Name:"iphone" , price: 60000, tax: 25},
+            {Name:"samsung" , price: 40000, tax:10},
+            {Name:"Vivo" , price: 30000,tax:5 },
+            {Name:"oppo" , price: 23000,tax:8},
+            {Name:"one plus" , price: 45000,tax:20}
+
+        ]
+      let allNames = list.map(function(item) {
+          var result = item.price+item.tax;
+          return  item.Name +" - "+result;
+
+      })
+      console.log(allNames);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

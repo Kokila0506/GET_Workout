@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <script>
+        var list = [
+            {Name:"iphone" , price: 60000},
+            {Name:"samsung" , price: 40000},
+            {Name:"Vivo" , price: 30000},
+            {Name:"oppo" , price: 23000},
+            {Name:"one plus" , price: 45000}
+
+        ]
+        let total = list.filter(function(item){
+            return item.price <= 30000;
+        })
+        console.log(total);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
