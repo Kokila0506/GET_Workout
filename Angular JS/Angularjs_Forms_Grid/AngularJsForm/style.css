@@ -1,0 +1,25 @@
+
+html {
+  background: url('./images/R.jfif');
+}
+.box{
+  width: 300px;
+  padding: 10px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+  background: rgb(247, 227, 127);
+  opacity: 0.8;
+  text-align: none;      
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  width: 100px;
+  display: inline-block;
+}

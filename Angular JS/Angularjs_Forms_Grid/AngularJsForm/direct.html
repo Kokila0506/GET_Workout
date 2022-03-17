@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+		   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css" />
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	</head>
+	<body ng-app="app">
+		<form id="form1">
+		<div  ng-controller="Ctrl" style="height: 250px;">
+		<div ag-grid="gridOptions" class="ag-theme-alpine-dark" style="height: 130%;"></div>
+		<input type="button" ng-click="showDiv()" value="Show Data" class="btn btn-success btn-sm" data-toggle="modal" data-target="#popup" style="margin-left: 15px;" /> 
+		 <!-- <input type="button" ng-click="hideDiv()" value="Hide Data"/> <br /><br /> -->
+        <div style="padding:10px; border:1px solid black; width:30%; font-weight:bold" ng-show='showhideprop'>
+	
+			<div class="container">
+				<div class="modal fade" id="popup" role="dialog">
+					 <div class="modal-dialog">
+						<div class="modal-content">
+							 <div class="modal-header"> 				 
+				
+							<input type="text" id="tx" ng-model="id" placeholder="Id" /></br>
+				
+		    
+			<input type="text" id="tx" ng-model="name" placeholder="Name"/></br>
+	
+	        
+			<input type="text" id="tx" ng-model="age" placeholder="Age" /></br>
+	        
+			<input type="text" id="tx" ng-model="gender" placeholder="Gender"/></br>
+	
+		     
+			<input type="text" id="tx" ng-model="year" placeholder="Year"/></br>
+		
+			
+			<input type="text" id="tx" ng-model="salary" placeholder="Salary"/></br>
+	
+		
+			<input type="text" id="tx" ng-model="role" placeholder="Role"/></br>
+
+	       <button ng-click="addRow()" > Add Row </button>	
+		   
+		   <input type="button" ng-click="hideDiv()" value="Cancel"/>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		
+		</div>
+	</form>
+		
+		<!-- <button  ng-click="clearFilters()" type="button" id="div1">Clear Filter</button> -->
+		<!-- <button  ng-click="addemp()" type="button">Add employee</button> -->
+		<!-- <div class="btnContainer">
+			<button id="appendBtn"> Append row</button>
+			</div>
+		</div> -->
+		
+					
+			<!-- <button  ng-click="clearFilters()" type="button" id="div1">Clear Filter</button> -->
+			<!-- <button  ng-click="addemp()" type="button">Add employee</button> -->
+			<!-- <div class="btnContainer">
+				<button id="appendBtn"> Append row</button>
+				</div>
+			</div> -->
+		<script src="https://unpkg.com/ag-grid-enterprise@27.0.1/dist/ag-grid-enterprise.min.js">
+		</script>
+		<script src="Js/direct.js"></script>
+		<script src="Js/PersonFilter.js"></script>
+		<script src="Js/YearFilter.js"></script>
+	</form>
+	</body>
+</html>
