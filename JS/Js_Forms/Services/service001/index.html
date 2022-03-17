@@ -1,0 +1,21 @@
+//https://www.journaldev.com/6685/angularjs-services-example-tutorial
+<html>
+    <head>
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body ng-app="app">
+        <div ng-controller="emp">
+            <div>
+                value of a is {{a}}
+                <input type="text" ng-model="a"> </br>
+
+                value of b is {{b}}
+                <input type="text" ng-model="b"> </br> 
+            </div>
+            Sum = {{sum}}</br>
+            <button ng-click="doSum()">Calculate</button>
+        </div>    
+    </body>
+</html>

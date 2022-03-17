@@ -1,0 +1,10 @@
+html {
+    background: url('./images/background.jpg');
+}
+h1 {
+    color: red;
+}
+label {
+    width: 100px;
+    display: inline-block;
+}
