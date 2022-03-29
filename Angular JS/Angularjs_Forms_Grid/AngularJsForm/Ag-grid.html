@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+	
+		   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css" />
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	</head>
+	<body ng-app="app">
+	
+		<div  ng-controller="Ctrl" style="height: 250px;">
+		<div ag-grid="gridOptions" class="ag-theme-alpine-dark" style="height: 130%;" ></div>		
+		
+     
+		<form id="form1">
+		<input type="button" ng-click="AddPOP()"  value="Add Data"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#popup" data-popup="popup" style="margin-left: 15px;" /> 
+		<button  ng-click="EditPop()" data-toggle="modal" class="btn btn-warning btn-sm" data-target="#popup" data-popup="popup" >Edit Data</button>
+		 
+		<button  ng-click="deleteRow()" data-toggle="modal" class="btn btn-danger btn-sm" data-target="#popup" data-popup="popup" >Delete Data</button>
+		
+
+        <div style="padding:10px;  width:30%; font-weight:bold" ng-show='showhideprop' >
+			<div type="text/ng-template" id="view">
+			<div class="container" ng-model="selectedAll">
+				<div class="modal fade" id="popup" role="dialog">
+					 <div class="modal-dialog">
+						<div class="modal-content">
+							 <div class="modal-header"> 															
+								<h2 class="modal-title">{{popTitle}}</h2>					
+						
+			<input type="text" id="tx" ng-model="id" placeholder="Id" /></br>
+				
+		    
+			<input type="text" id="tx"  ng-model="name" placeholder="Name"/></br>
+	
+	        
+			<input type="number" id="tx" ng-model="age" placeholder="Age" /></br>
+	        
+			<input type="gender" id="tx" ng-model="gender" placeholder="Gender"/></br>
+	
+		     
+			<input type="number" id="tx" ng-model="year" placeholder="Year"/></br>
+		
+			
+			<input type="number" id="tx" ng-model="salary" placeholder="Salary"/></br>
+	
+		
+			<input type="text" id="tx"  ng-model="role" placeholder="Role"/></br>
+
+
+	       <button ng-click="addRow()" > {{btnName}} </button>
+		   <input type="button" ng-click="hideDiv()" value="Cancel"/>	
+					
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   </div>
+		   				
+			
+		<script src="https://unpkg.com/ag-grid-enterprise@27.0.1/dist/ag-grid-enterprise.min.js">
+		</script>
+		<script src="Js/Ag-grid.js"></script>
+		<script src="Js/PersonFilter.js"></script>
+		<script src="Js/YearFilter.js"></script>
+	</form>
+	</body>
+</html>
